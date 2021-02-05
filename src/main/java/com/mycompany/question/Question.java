@@ -16,8 +16,14 @@ public class Question extends javax.swing.JPanel implements Serializable{
     /**
      * Creates new form Question
      */
-    public Question() {
+    public Question(String enun, String pre1, String pre2, String pre3, String sol, int num) {
         initComponents();
+        jLabel1.setText(String.valueOf(num));
+        jLabel2.setText(enun);
+        rBRespuesta1.setText(pre1);
+        rBRespuesta2.setText(pre2);
+        rBRespuesta3.setText(pre3);
+        rBRespuesta4.setText(sol);
 
     }
 
@@ -39,9 +45,10 @@ public class Question extends javax.swing.JPanel implements Serializable{
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setMaximumSize(new java.awt.Dimension(400, 67));
-        setMinimumSize(new java.awt.Dimension(400, 67));
-        setPreferredSize(new java.awt.Dimension(400, 67));
+        setMaximumSize(new java.awt.Dimension(400, 305));
+        setMinimumSize(new java.awt.Dimension(400, 305));
+        setName(""); // NOI18N
+        setPreferredSize(new java.awt.Dimension(400, 305));
         setRequestFocusEnabled(false);
 
         buttonGroup1.add(rBRespuesta1);
@@ -96,13 +103,12 @@ public class Question extends javax.swing.JPanel implements Serializable{
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rBRespuesta1)

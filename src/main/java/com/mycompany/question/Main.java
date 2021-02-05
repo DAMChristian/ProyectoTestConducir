@@ -7,7 +7,7 @@ package com.mycompany.question;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
-import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import javax.swing.JFileChooser;
@@ -20,6 +20,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class Main extends javax.swing.JFrame {
     
     private String archivo;
+    private ArrayList<Question> panelPregunta;
     
     /**
      * Creates new form Main
@@ -41,6 +42,9 @@ public class Main extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(400, 400));
+        setResizable(false);
+        setSize(new java.awt.Dimension(400, 400));
 
         jButton1.setText("Abrir...");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +101,6 @@ public class Main extends javax.swing.JFrame {
             }
             jButton1.setText("Iniciar Test");
         } else {
-            jButton1.setText("Abrir...");
             generarPreguntas();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -108,10 +111,26 @@ public class Main extends javax.swing.JFrame {
             
             List<Pregunta> preguntas = Arrays.asList(mapper.readValue(new File(archivo), Pregunta[].class));
             
-            preguntas.forEach(System.out::println);
+            panelPregunta = new ArrayList<>();
             
+            for (Pregunta pregunta : preguntas) {
+                Question panel = new Question(pregunta.getEnunciado(), pregunta.getPregunta1(), pregunta.getPregunta2(), pregunta.getPregunta3(), pregunta.getPreguntaCorrecta(), 1);
+                panelPregunta.add(panel);
+            }
+            mostrarPregunta();
         } catch (Exception e) {
             System.out.println("a");
+        }
+    }
+    
+    private void mostrarPregunta() {
+        if(jPanel1.isVisible()){
+            jPanel1.setVisible(false);
+            Question a = panelPregunta.get(0);
+            this.add(a);
+            a.setVisible(true);
+            a.setSize(400, 305);
+            
         }
     }
     

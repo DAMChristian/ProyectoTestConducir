@@ -46,7 +46,7 @@ public class Question extends javax.swing.JPanel implements Serializable{
         jLabel2 = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(400, 305));
-        setMinimumSize(new java.awt.Dimension(400, 305));
+        setMinimumSize(new java.awt.Dimension(0, 0));
         setName(""); // NOI18N
         setPreferredSize(new java.awt.Dimension(400, 305));
         setRequestFocusEnabled(false);
@@ -87,8 +87,8 @@ public class Question extends javax.swing.JPanel implements Serializable{
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,7 +108,7 @@ public class Question extends javax.swing.JPanel implements Serializable{
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rBRespuesta1)
@@ -118,7 +118,7 @@ public class Question extends javax.swing.JPanel implements Serializable{
                 .addComponent(rBRespuesta3)
                 .addGap(18, 18, 18)
                 .addComponent(rBRespuesta4)
-                .addGap(12, 12, 12))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

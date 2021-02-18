@@ -5,23 +5,31 @@
  */
 package com.mycompany.question;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  *
  * @author Alumno Tarde
  */
 public class Pregunta {
-    private String enunciado, pregunta1, pregunta2, pregunta3, preguntaCorrecta;
+    private String enunciado, pregunta1, pregunta2, pregunta3, pregunta4, preguntaCorrecta;
     
-    public Pregunta() {
+    public void aleatorizar() {
+        List<String> aleatorizarRespuestas = new ArrayList<String>();
         
-    }
-
-    public Pregunta(String enunciado, String pregunta1, String pregunta2, String pregunta3, String preguntaCorrecta) {
-        this.enunciado = enunciado;
-        this.pregunta1 = pregunta1;
-        this.pregunta2 = pregunta2;
-        this.pregunta3 = pregunta3;
-        this.preguntaCorrecta = preguntaCorrecta;
+        aleatorizarRespuestas.add(pregunta1);
+        aleatorizarRespuestas.add(pregunta2);
+        aleatorizarRespuestas.add(pregunta3);
+        aleatorizarRespuestas.add(pregunta4);
+        
+        Collections.shuffle(aleatorizarRespuestas);
+        
+        this.pregunta1 = aleatorizarRespuestas.get(0);
+        this.pregunta2 = aleatorizarRespuestas.get(1);
+        this.pregunta3 = aleatorizarRespuestas.get(2);
+        this.pregunta4 = aleatorizarRespuestas.get(3);
     }
 
     public String getEnunciado() {
@@ -56,6 +64,14 @@ public class Pregunta {
         this.pregunta3 = pregunta3;
     }
 
+    public String getPregunta4() {
+        return pregunta4;
+    }
+
+    public void setPregunta4(String pregunta4) {
+        this.pregunta4 = pregunta4;
+    }
+
     public String getPreguntaCorrecta() {
         return preguntaCorrecta;
     }
@@ -66,7 +82,7 @@ public class Pregunta {
 
     @Override
     public String toString() {
-        return "Pregunta{" + "enunciado=" + enunciado + ", pregunta1=" + pregunta1 + ", pregunta2=" + pregunta2 + ", pregunta3=" + pregunta3 + ", preguntaCorrecta=" + preguntaCorrecta + '}';
+        return "Pregunta{" + "enunciado=" + enunciado + ", pregunta1=" + pregunta1 + ", pregunta2=" + pregunta2 + ", pregunta3=" + pregunta3 + ", pregunta4=" + pregunta4 + ", preguntaCorrecta=" + preguntaCorrecta + '}';
     }
     
     

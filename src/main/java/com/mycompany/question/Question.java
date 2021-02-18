@@ -19,7 +19,9 @@ public class Question extends javax.swing.JPanel implements Serializable{
     public Question(String enun, String pre1, String pre2, String pre3, String sol, int num) {
         initComponents();
         jLabel1.setText(String.valueOf(num));
+        //45
         jLabel2.setText(enun);
+        //50
         rBRespuesta1.setText(pre1);
         rBRespuesta2.setText(pre2);
         rBRespuesta3.setText(pre3);
@@ -53,11 +55,6 @@ public class Question extends javax.swing.JPanel implements Serializable{
 
         buttonGroup1.add(rBRespuesta1);
         rBRespuesta1.setText("Respuesta 1");
-        rBRespuesta1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rBRespuesta1ActionPerformed(evt);
-            }
-        });
 
         buttonGroup1.add(rBRespuesta2);
         rBRespuesta2.setText("Respuesta 2");
@@ -67,17 +64,13 @@ public class Question extends javax.swing.JPanel implements Serializable{
 
         buttonGroup1.add(rBRespuesta4);
         rBRespuesta4.setText("Respuesta 4");
-        rBRespuesta4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rBRespuesta4ActionPerformed(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("1.");
 
         jLabel2.setText("<html><p>Texto de la pregunta que es totalmente aleatorio ahdjajij  iajasij dijwi wij diwjdiwjdio jao ddijdiwa woijd iwioajdoajidjwijdiwad</p> </html>");
+        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -122,15 +115,21 @@ public class Question extends javax.swing.JPanel implements Serializable{
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rBRespuesta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBRespuesta1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rBRespuesta1ActionPerformed
-
-    private void rBRespuesta4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBRespuesta4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rBRespuesta4ActionPerformed
-
-
+    public String preguntaEscogida() {
+        String pregunta = "";
+        if (rBRespuesta1.isSelected()) {
+            pregunta = rBRespuesta1.getText();
+        } else if (rBRespuesta2.isSelected()) {
+            pregunta = rBRespuesta2.getText();
+        } else if (rBRespuesta3.isSelected()) {
+            pregunta = rBRespuesta3.getText();   
+        } else if (rBRespuesta4.isSelected()) {
+            pregunta = rBRespuesta4.getText();
+        }
+        return pregunta;
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;

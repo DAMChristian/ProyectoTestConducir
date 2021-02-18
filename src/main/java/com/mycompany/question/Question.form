@@ -88,9 +88,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Respuesta 1"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rBRespuesta1ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rBRespuesta2">
       <Properties>
@@ -115,9 +112,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Respuesta 4"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rBRespuesta4ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
@@ -133,6 +127,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p&gt;Texto de la pregunta que es totalmente aleatorio ahdjajij  iajasij dijwi wij diwjdiwjdio jao ddijdiwa woijd iwioajdoajidjwijdiwad&lt;/p&gt; &lt;/html&gt;"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
     </Component>
   </SubComponents>

@@ -10,10 +10,10 @@ import java.awt.BorderLayout;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
@@ -25,6 +25,7 @@ public class Main extends javax.swing.JFrame {
     private String archivo;
     private ArrayList<Question> panelPregunta;
     private int preguntaAct;
+    private List<Pregunta> preguntas;
     
     /**
      * Creates new form Main
@@ -53,6 +54,7 @@ public class Main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setResizable(false);
         setSize(new java.awt.Dimension(424, 450));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 400));
@@ -179,40 +181,58 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Question a = panelPregunta.get(preguntaAct);
-        a.setVisible(false);
-        preguntaAct--;
-        a = panelPregunta.get(preguntaAct);
-        jPanel1.add(a, BorderLayout.CENTER);
-        a.setVisible(true);
-        this.repaint();
+        if(preguntaAct > 0) {
+            Question a = panelPregunta.get(preguntaAct);
+            a.setVisible(false);
+            preguntaAct--;
+            a = panelPregunta.get(preguntaAct);
+            jPanel1.add(a, BorderLayout.CENTER);
+            a.setVisible(true);
+            this.repaint();
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Question a = panelPregunta.get(preguntaAct);
-        a.setVisible(false);
-        preguntaAct++;
-        a = panelPregunta.get(preguntaAct);
-        jPanel1.add(a, BorderLayout.CENTER);
-        a.setVisible(true);
-        this.repaint();
+        if(preguntaAct < panelPregunta.size() - 1) {
+            Question a = panelPregunta.get(preguntaAct);
+            a.setVisible(false);
+            preguntaAct++;
+            a = panelPregunta.get(preguntaAct);
+            jPanel1.add(a, BorderLayout.CENTER);
+            a.setVisible(true);
+            this.repaint();
+            
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        int puntuacion = 0;
+        for (int i = 0; i < panelPregunta.size() ; i++) {
+            String preguntaSeleccionada = panelPregunta.get(i).preguntaEscogida();
+            String preguntaCorrecta = preguntas.get(i).getPreguntaCorrecta();
+            if(preguntaSeleccionada.equals(preguntaCorrecta)) {
+                puntuacion++;
+            }
+        }
+        JOptionPane.showConfirmDialog(this, puntuacion, "Advertencia", JOptionPane.WARNING_MESSAGE);
+ 
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void generarPreguntas() {
         try {
             ObjectMapper mapper = new ObjectMapper();
             
-            List<Pregunta> preguntas = Arrays.asList(mapper.readValue(new File(archivo), Pregunta[].class));
+            preguntas = Arrays.asList(mapper.readValue(new File(archivo), Pregunta[].class));
+            Collections.shuffle(preguntas);
             
             panelPregunta = new ArrayList<>();
             
+            int numPregunta = 1;
             for (Pregunta pregunta : preguntas) {
-                Question panel = new Question(pregunta.getEnunciado(), pregunta.getPregunta1(), pregunta.getPregunta2(), pregunta.getPregunta3(), pregunta.getPreguntaCorrecta(), 1);
+                pregunta.aleatorizar();
+                Question panel = new Question(pregunta.getEnunciado(), pregunta.getPregunta1(), pregunta.getPregunta2(), pregunta.getPregunta3(), pregunta.getPregunta4(), numPregunta);
                 panelPregunta.add(panel);
+                numPregunta++;
             }
             mostrarPregunta();
         } catch (Exception e) {
@@ -232,7 +252,6 @@ public class Main extends javax.swing.JFrame {
             a.setSize(400, 305);
             jPanel2.setVisible(true);
             jPanel1.add(jPanel2, BorderLayout.SOUTH);
-
         }
     }
     

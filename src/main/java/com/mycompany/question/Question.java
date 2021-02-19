@@ -20,12 +20,12 @@ public class Question extends javax.swing.JPanel implements Serializable{
         initComponents();
         jLabel1.setText(String.valueOf(num));
         //45
-        jLabel2.setText(enun);
+        jLabel2.setText("<html>" + enun + "</html>");
         //50
-        rBRespuesta1.setText(pre1);
-        rBRespuesta2.setText(pre2);
-        rBRespuesta3.setText(pre3);
-        rBRespuesta4.setText(sol);
+        rBRespuesta1.setText("<html>" + pre1 + "</html>");
+        rBRespuesta2.setText("<html>" + pre2 + "</html>");
+        rBRespuesta3.setText("<html>" + pre3 + "</html>");
+        rBRespuesta4.setText("<html>" + sol + "</html>");
 
     }
 
@@ -70,6 +70,7 @@ public class Question extends javax.swing.JPanel implements Serializable{
         jLabel1.setText("1.");
 
         jLabel2.setText("<html><p>Texto de la pregunta que es totalmente aleatorio ahdjajij  iajasij dijwi wij diwjdiwjdio jao ddijdiwa woijd iwioajdoajidjwijdiwad</p> </html>");
+        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -94,14 +95,14 @@ public class Question extends javax.swing.JPanel implements Serializable{
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(88, 88, 88))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rBRespuesta1)

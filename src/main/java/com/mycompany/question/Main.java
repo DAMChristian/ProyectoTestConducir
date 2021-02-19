@@ -209,7 +209,7 @@ public class Main extends javax.swing.JFrame {
         int puntuacion = 0;
         for (int i = 0; i < panelPregunta.size() ; i++) {
             String preguntaSeleccionada = panelPregunta.get(i).preguntaEscogida();
-            String preguntaCorrecta = preguntas.get(i).getPreguntaCorrecta();
+            String preguntaCorrecta = "<html>" + preguntas.get(i).getPreguntaCorrecta() + "</html>";
             if(preguntaSeleccionada.equals(preguntaCorrecta)) {
                 puntuacion++;
             }

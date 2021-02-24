@@ -18,9 +18,9 @@ public class Question extends javax.swing.JPanel implements Serializable{
      */
     public Question(String enun, String pre1, String pre2, String pre3, String sol, int num) {
         initComponents();
-        jLabel1.setText(String.valueOf(num));
+        numeroPreg.setText(String.valueOf(num));
         //45
-        jLabel2.setText("<html>" + enun + "</html>");
+        enunciado.setText("<html>" + enun + "</html>");
         //50
         rBRespuesta1.setText("<html>" + pre1 + "</html>");
         rBRespuesta2.setText("<html>" + pre2 + "</html>");
@@ -44,8 +44,8 @@ public class Question extends javax.swing.JPanel implements Serializable{
         rBRespuesta3 = new javax.swing.JRadioButton();
         rBRespuesta4 = new javax.swing.JRadioButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        numeroPreg = new javax.swing.JLabel();
+        enunciado = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(400, 305));
         setMinimumSize(new java.awt.Dimension(0, 0));
@@ -65,13 +65,13 @@ public class Question extends javax.swing.JPanel implements Serializable{
         buttonGroup1.add(rBRespuesta4);
         rBRespuesta4.setText("Respuesta 4");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("1.");
+        numeroPreg.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        numeroPreg.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        numeroPreg.setText("1.");
 
-        jLabel2.setText("<html><p>Texto de la pregunta que es totalmente aleatorio ahdjajij  iajasij dijwi wij diwjdiwjdio jao ddijdiwa woijd iwioajdoajidjwijdiwad</p> </html>");
-        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        enunciado.setText("<html><p>Texto de la pregunta que es totalmente aleatorio ahdjajij  iajasij dijwi wij diwjdiwjdio jao ddijdiwa woijd iwioajdoajidjwijdiwad</p> </html>");
+        enunciado.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        enunciado.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -79,9 +79,9 @@ public class Question extends javax.swing.JPanel implements Serializable{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(numeroPreg, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(enunciado, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
@@ -98,10 +98,10 @@ public class Question extends javax.swing.JPanel implements Serializable{
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(numeroPreg, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(88, 88, 88))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(enunciado, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -133,9 +133,9 @@ public class Question extends javax.swing.JPanel implements Serializable{
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel enunciado;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel numeroPreg;
     private javax.swing.JRadioButton rBRespuesta1;
     private javax.swing.JRadioButton rBRespuesta2;
     private javax.swing.JRadioButton rBRespuesta3;

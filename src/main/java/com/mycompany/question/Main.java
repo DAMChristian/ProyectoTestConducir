@@ -44,105 +44,105 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        pPrincial = new javax.swing.JPanel();
+        abrirIniciar = new javax.swing.JButton();
+        navBar = new javax.swing.JPanel();
+        barraProgreso = new javax.swing.JProgressBar();
+        anterior = new javax.swing.JButton();
+        siguiente = new javax.swing.JButton();
+        finalizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
         setSize(new java.awt.Dimension(424, 450));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(400, 400));
+        pPrincial.setPreferredSize(new java.awt.Dimension(400, 400));
 
-        jButton1.setText("Abrir...");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        abrirIniciar.setText("Abrir...");
+        abrirIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                abrirIniciarActionPerformed(evt);
             }
         });
 
-        jPanel2.setEnabled(true);
-        jPanel2.setMaximumSize(new java.awt.Dimension(380, 67));
-        jPanel2.setPreferredSize(new java.awt.Dimension(380, 67));
-        jPanel2.setVisible(false);
+        navBar.setEnabled(true);
+        navBar.setMaximumSize(new java.awt.Dimension(380, 67));
+        navBar.setPreferredSize(new java.awt.Dimension(380, 67));
+        navBar.setVisible(false);
 
-        jProgressBar1.setMaximumSize(new java.awt.Dimension(400, 4));
-        jProgressBar1.setPreferredSize(new java.awt.Dimension(400, 4));
+        barraProgreso.setMaximumSize(new java.awt.Dimension(400, 4));
+        barraProgreso.setPreferredSize(new java.awt.Dimension(400, 4));
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUMNO TARDE\\Downloads\\flecha-izquierda.png")); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        anterior.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUMNO TARDE\\Downloads\\flecha-izquierda.png")); // NOI18N
+        anterior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                anteriorActionPerformed(evt);
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUMNO TARDE\\Downloads\\flecha-correcta.png")); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        siguiente.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUMNO TARDE\\Downloads\\flecha-correcta.png")); // NOI18N
+        siguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                siguienteActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Finalizar");
-        jButton4.setMaximumSize(new java.awt.Dimension(73, 38));
-        jButton4.setMinimumSize(new java.awt.Dimension(73, 38));
-        jButton4.setPreferredSize(new java.awt.Dimension(83, 38));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        finalizar.setText("Finalizar");
+        finalizar.setMaximumSize(new java.awt.Dimension(73, 38));
+        finalizar.setMinimumSize(new java.awt.Dimension(73, 38));
+        finalizar.setPreferredSize(new java.awt.Dimension(83, 38));
+        finalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                finalizarActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout navBarLayout = new javax.swing.GroupLayout(navBar);
+        navBar.setLayout(navBarLayout);
+        navBarLayout.setHorizontalGroup(
+            navBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navBarLayout.createSequentialGroup()
+                .addComponent(anterior, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(finalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
-            .addComponent(jProgressBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(siguiente, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
+            .addComponent(barraProgreso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+        navBarLayout.setVerticalGroup(
+            navBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navBarLayout.createSequentialGroup()
+                .addGroup(navBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(anterior, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(finalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(barraProgreso, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(96, 96, 96))
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pPrincialLayout = new javax.swing.GroupLayout(pPrincial);
+        pPrincial.setLayout(pPrincialLayout);
+        pPrincialLayout.setHorizontalGroup(
+            pPrincialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pPrincialLayout.createSequentialGroup()
+                .addGroup(pPrincialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pPrincialLayout.createSequentialGroup()
                         .addGap(164, 164, 164)
-                        .addComponent(jButton1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(abrirIniciar))
+                    .addGroup(pPrincialLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(navBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pPrincialLayout.setVerticalGroup(
+            pPrincialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pPrincialLayout.createSequentialGroup()
                 .addGap(184, 184, 184)
-                .addComponent(jButton1)
+                .addComponent(abrirIniciar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(navBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -151,61 +151,50 @@ public class Main extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
+                .addComponent(pPrincial, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)
+                .addComponent(pPrincial, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(jButton1.getText().equals("Abrir...")) {   
-            JFileChooser arch = new JFileChooser();
-            FileNameExtensionFilter filtro = new FileNameExtensionFilter("json", "JSON");
-            arch.setFileFilter(filtro);
-            if(arch.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-                //jButton1.setText("Iniciar Test");
-                archivo = arch.getSelectedFile().getAbsolutePath();
-            }
-            jButton1.setText("Iniciar Test");
-        } else {
-            generarPreguntas();
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void abrirIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirIniciarActionPerformed
+        abrirIniciar();
+    }//GEN-LAST:event_abrirIniciarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorActionPerformed
         if(preguntaAct > 0) {
-            Question a = panelPregunta.get(preguntaAct);
-            a.setVisible(false);
+            Question panel = panelPregunta.get(preguntaAct);
+            panel.setVisible(false);
             preguntaAct--;
-            a = panelPregunta.get(preguntaAct);
-            jPanel1.add(a, BorderLayout.CENTER);
-            a.setVisible(true);
+            panel = panelPregunta.get(preguntaAct);
+            pPrincial.add(panel, BorderLayout.CENTER);
+            panel.setVisible(true);
             this.repaint();
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_anteriorActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
         if(preguntaAct < panelPregunta.size() - 1) {
-            Question a = panelPregunta.get(preguntaAct);
-            a.setVisible(false);
+            Question panel = panelPregunta.get(preguntaAct);
+            panel.setVisible(false);
             preguntaAct++;
-            a = panelPregunta.get(preguntaAct);
-            jPanel1.add(a, BorderLayout.CENTER);
-            a.setVisible(true);
+            panel = panelPregunta.get(preguntaAct);
+            pPrincial.add(panel, BorderLayout.CENTER);
+            panel.setVisible(true);
             this.repaint();
             
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_siguienteActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void finalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarActionPerformed
         int puntuacion = 0;
         for (int i = 0; i < panelPregunta.size() ; i++) {
             String preguntaSeleccionada = panelPregunta.get(i).preguntaEscogida();
@@ -214,10 +203,36 @@ public class Main extends javax.swing.JFrame {
                 puntuacion++;
             }
         }
-        JOptionPane.showConfirmDialog(this, puntuacion, "Advertencia", JOptionPane.WARNING_MESSAGE);
- 
-    }//GEN-LAST:event_jButton4ActionPerformed
-
+        int confirmacion = JOptionPane.showConfirmDialog(this, "Aciertos = " + puntuacion + "/" + panelPregunta.size() + "\n¿Deseas cargar otro test?");
+        if (confirmacion == JOptionPane.OK_OPTION) {
+            navBar.setVisible(false);
+            for (Question panel : panelPregunta) {
+                pPrincial.remove(panel);
+            }
+            this.setSize(444, 470);
+            pPrincial.repaint();
+            abrirIniciar.setText("Abrir...");
+            abrirIniciar.setVisible(true);
+        } else {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_finalizarActionPerformed
+    
+    private void abrirIniciar() {
+        if(abrirIniciar.getText().equals("Abrir...")) {   
+            JFileChooser arch = new JFileChooser();
+            FileNameExtensionFilter filtro = new FileNameExtensionFilter("json", "JSON");
+            arch.setFileFilter(filtro);
+            if(arch.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+                archivo = arch.getSelectedFile().getAbsolutePath();
+                abrirIniciar.setText("Iniciar Test");
+            }
+            
+        } else {
+            generarPreguntas();
+        }
+    }
+    
     private void generarPreguntas() {
         try {
             ObjectMapper mapper = new ObjectMapper();
@@ -242,16 +257,17 @@ public class Main extends javax.swing.JFrame {
     
     private void mostrarPregunta() {
         
-        if(jButton1.isVisible()){
+        if(abrirIniciar.isVisible()){
             this.setSize(424, 450);
-            jPanel1.setLayout(new BorderLayout());
-            jButton1.setVisible(false);
-            Question a = panelPregunta.get(preguntaAct);
-            jPanel1.add(a, BorderLayout.CENTER);
-            a.setVisible(true);
-            a.setSize(400, 305);
-            jPanel2.setVisible(true);
-            jPanel1.add(jPanel2, BorderLayout.SOUTH);
+            pPrincial.setLayout(new BorderLayout());
+            abrirIniciar.setVisible(false);
+            Question panel = panelPregunta.get(preguntaAct);
+            pPrincial.add(panel, BorderLayout.CENTER);
+            panel.setVisible(true);
+            panel.setSize(400, 305);
+            navBar.setVisible(true);
+            pPrincial.add(navBar, BorderLayout.SOUTH);
+            pPrincial.repaint();
         }
     }
     
@@ -291,13 +307,13 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    public javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JButton abrirIniciar;
+    private javax.swing.JButton anterior;
+    private javax.swing.JProgressBar barraProgreso;
+    private javax.swing.JButton finalizar;
+    private javax.swing.JPanel navBar;
+    private javax.swing.JPanel pPrincial;
+    public javax.swing.JButton siguiente;
     // End of variables declaration//GEN-END:variables
 }
 

@@ -54,15 +54,19 @@ public class Question extends javax.swing.JPanel implements Serializable{
         setRequestFocusEnabled(false);
 
         buttonGroup1.add(rBRespuesta1);
+        rBRespuesta1.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         rBRespuesta1.setText("Respuesta 1");
 
         buttonGroup1.add(rBRespuesta2);
+        rBRespuesta2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         rBRespuesta2.setText("Respuesta 2");
 
         buttonGroup1.add(rBRespuesta3);
+        rBRespuesta3.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         rBRespuesta3.setText("Respuesta 3");
 
         buttonGroup1.add(rBRespuesta4);
+        rBRespuesta4.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         rBRespuesta4.setText("Respuesta 4");
 
         numeroPreg.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -112,7 +116,7 @@ public class Question extends javax.swing.JPanel implements Serializable{
                 .addComponent(rBRespuesta3)
                 .addGap(18, 18, 18)
                 .addComponent(rBRespuesta4)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

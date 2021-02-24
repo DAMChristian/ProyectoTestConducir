@@ -5,6 +5,7 @@
  */
 package com.mycompany.question;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.awt.BorderLayout;
 import java.io.File;
@@ -31,6 +32,7 @@ public class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     public Main() {
+        FlatDarkLaf.install();       
         initComponents();
         preguntaAct = 0;
     }
@@ -205,18 +207,24 @@ public class Main extends javax.swing.JFrame {
         }
         int confirmacion = JOptionPane.showConfirmDialog(this, "Aciertos = " + puntuacion + "/" + panelPregunta.size() + "\n¿Deseas cargar otro test?");
         if (confirmacion == JOptionPane.OK_OPTION) {
-            navBar.setVisible(false);
-            for (Question panel : panelPregunta) {
-                pPrincial.remove(panel);
-            }
-            this.setSize(444, 470);
-            pPrincial.repaint();
-            abrirIniciar.setText("Abrir...");
-            abrirIniciar.setVisible(true);
+            reset();
         } else {
             System.exit(0);
         }
     }//GEN-LAST:event_finalizarActionPerformed
+    
+    private void reset() {
+        navBar.setVisible(false);
+        for (Question panel : panelPregunta) {
+            pPrincial.remove(panel);
+        }
+        panelPregunta.clear();
+        this.setSize(444, 470);
+        pPrincial.repaint();
+        abrirIniciar.setText("Abrir...");
+        abrirIniciar.setVisible(true);
+        preguntaAct = 0;
+    }
     
     private void abrirIniciar() {
         if(abrirIniciar.getText().equals("Abrir...")) {   
@@ -251,7 +259,7 @@ public class Main extends javax.swing.JFrame {
             }
             mostrarPregunta();
         } catch (Exception e) {
-            System.out.println("a");
+            System.out.println(e);
         }
     }
     

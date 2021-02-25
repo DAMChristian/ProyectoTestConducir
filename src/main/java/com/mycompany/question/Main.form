@@ -149,25 +149,19 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="anterior">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ALUMNO TARDE\Downloads\flecha-izquierda.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="anteriorActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="URL imageResource = Main.class.getClassLoader().getResource(&quot;left-arrow.png&quot;);&#xa;anterior.setIcon(new ImageIcon(imageResource));"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="siguiente">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ALUMNO TARDE\Downloads\flecha-correcta.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="siguienteActionPerformed"/>
               </Events>
               <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="URL imageResource = Main.class.getClassLoader().getResource(&quot;right-arrow.png&quot;);&#xa;siguiente.setIcon(new ImageIcon(imageResource));"/>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>

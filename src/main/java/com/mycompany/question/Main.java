@@ -9,10 +9,12 @@ import com.formdev.flatlaf.FlatDarkLaf;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.awt.BorderLayout;
 import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -76,14 +78,16 @@ public class Main extends javax.swing.JFrame {
         barraProgreso.setMaximumSize(new java.awt.Dimension(400, 4));
         barraProgreso.setPreferredSize(new java.awt.Dimension(400, 4));
 
-        anterior.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUMNO TARDE\\Downloads\\flecha-izquierda.png")); // NOI18N
+        URL imageResource = Main.class.getClassLoader().getResource("left-arrow.png");
+        anterior.setIcon(new ImageIcon(imageResource));
         anterior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 anteriorActionPerformed(evt);
             }
         });
 
-        siguiente.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUMNO TARDE\\Downloads\\flecha-correcta.png")); // NOI18N
+        URL imageResource = Main.class.getClassLoader().getResource("right-arrow.png");
+        siguiente.setIcon(new ImageIcon(imageResource));
         siguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 siguienteActionPerformed(evt);

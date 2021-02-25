@@ -86,8 +86,8 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        URL imageResource = Main.class.getClassLoader().getResource("right-arrow.png");
-        siguiente.setIcon(new ImageIcon(imageResource));
+        URL imageResource2 = Main.class.getClassLoader().getResource("right-arrow.png");
+        siguiente.setIcon(new ImageIcon(imageResource2));
         siguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 siguienteActionPerformed(evt);

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.question;
+package com.christian.question;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.fasterxml.jackson.databind.ObjectMapper;
